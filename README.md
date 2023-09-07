@@ -1,2 +1,2 @@
 # studydrive_downloader
-user script, popuser script
+a simple user script that enables downloads again
