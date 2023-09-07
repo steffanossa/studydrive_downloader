@@ -22,8 +22,6 @@
     buttonCopy = downloadButton.cloneNode(true);
     downloadButton.parentNode.replaceChild(buttonCopy, downloadButton);
     buttonCopy.addEventListener('click', extractAndOpenLink);
-    buttonCopy.style.backgroundColor = 'rgba(var(--colors-blue-600))';
-    buttonCopy.style.color = 'white';
     buttonCopy.title = 'Herunterladen';
   }
 })();
