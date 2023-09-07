@@ -26,6 +26,4 @@
     buttonCopy.style.color = 'white';
     buttonCopy.title = 'Herunterladen';
   }
-
-
 })();
