@@ -5,6 +5,7 @@
 // @grant       none
 // @version     1.0
 // @author      steffanossa
+// @license     MIT
 // @description 06/09/2023, 13:56:21
 // ==/UserScript==
 
