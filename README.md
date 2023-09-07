@@ -1,5 +1,5 @@
 # studydrive_downloader
-a simple user script that enables downloads without premium again
+enables downloads for non-premium users
 
 
 > Friede dem Wellblech, Krieg den Palästen
