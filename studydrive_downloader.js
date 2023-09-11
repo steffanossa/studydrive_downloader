@@ -24,6 +24,6 @@
     buttonCopy = downloadButton.cloneNode(true);
     downloadButton.parentNode.replaceChild(buttonCopy, downloadButton);
     buttonCopy.addEventListener('click', extractAndOpenLink);
-    buttonCopy.title = 'Herunterladen';
+    buttonCopy.title = 'Download';
   }
 })();
