@@ -2,8 +2,9 @@
 // @name        Studydrive Downloader
 // @namespace   Violentmonkey Scripts
 // @match       https://www.studydrive.net/de/doc/*
+// @match       https://www.studydrive.net/en/doc/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      steffanossa
 // @license     MIT
 // @description 06/09/2023, 13:56:21
