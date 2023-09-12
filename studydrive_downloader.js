@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name        Studydrive Downloader
 // @namespace   Violentmonkey Scripts
-// @match       https://www.studydrive.net/de/doc/*
-// @match       https://www.studydrive.net/en/doc/*
+// @match       https://www.studydrive.net/*/doc/*
 // @grant       none
 // @version     1.1
 // @author      steffanossa
