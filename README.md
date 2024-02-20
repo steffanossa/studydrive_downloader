@@ -1,6 +1,6 @@
 # studydrive_downloader
 
-enables downloads for non-premium users
+enables downloads for non-premium users (you have to be a logged in user, though)
 
 wait for the download button to turn blue
 

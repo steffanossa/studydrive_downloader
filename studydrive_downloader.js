@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.studydrive.net/*/doc/*
 // @grant       none
-// @version     1.2
+// @version     1.2.1
 // @author      steffanossa
 // @license     MIT
 // @description Stellt die Downloadmöglichkeit für Dokumente wieder her.
@@ -13,33 +13,38 @@
 	fetch(document.location.href)
 		.then(res => res.text())
 		.then(res => {
-			var fileName = /display_file_name":"(.*?)"/.exec(res)[1];
-			var url = /file_preview":"(.*?)"/.exec(res)[1];
-			var url = url.replace('\\', '');
+			let fileName = /display_file_name":"(.*?)"/.exec(res)[1];
+			let url = /file_preview":"(.*?)"/.exec(res)[1];
+			url = url.replace('\\', '');
 
 			fetch(url)
 				.then(res => res.arrayBuffer())
 				.then(res => {
-					var file = new Blob([res], { type: 'application/pdf' });
-					var fileURL = URL.createObjectURL(file);
+					let file = new Blob([res], { type: 'application/pdf' });
+					let fileURL = URL.createObjectURL(file);
 
 					console.log('Ich grüße meine liebe Oma, die langsamste Frau der Welt ❤️');
 					console.log('Friede dem Wellblech, Krieg den Palästen');
 
-					const downloadButton = document.querySelector('[data-specific-auth-trigger="download"]');
+					let downloadButton = document.querySelector('[data-specific-auth-trigger="download"]');
 					let buttonCopy;
 					if (downloadButton) {
 						buttonCopy = downloadButton.cloneNode(true);
 						downloadButton.parentNode.replaceChild(buttonCopy, downloadButton);
-						buttonCopy.addEventListener('click', () => extractAndOpenLink(fileURL));
+						buttonCopy.addEventListener('click', () => extractAndOpenLink(fileURL, fileName));
 						buttonCopy.title = 'Download';
 						buttonCopy.style.color = 'white';
-						buttonCopy.style.background = 'magenta';
+						buttonCopy.style.background = '#38a7fb';
 					}
 				});
 		});
 
-	function extractAndOpenLink(fileUrl) {
-		window.open(fileUrl);
+	function extractAndOpenLink(fileUrl, fileName) {
+		let a = document.createElement('a');
+		a.href = fileUrl;
+		a.download = fileName;
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
 	}
 })();
