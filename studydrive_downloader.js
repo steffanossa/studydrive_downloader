@@ -6,7 +6,7 @@
 // @version     1.2
 // @author      steffanossa
 // @license     MIT
-// @description Stellt die Downloadmöglichkeit von PDFs wieder her.
+// @description Stellt die Downloadmöglichkeit für Dokumente wieder her.
 // ==/UserScript==
 
 (function () {
